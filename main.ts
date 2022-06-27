@@ -136,7 +136,8 @@ export default class MyPlugin extends Plugin {
         if(landscape) {
             args = args.concat(['-l']);
         }
-
+	
+	new Notice('args debug: ' + args);
         const { stderr, stdout } = await this.runProcess(reSnapPath, args);
         return { drawingFilePath, drawingFileName };
     }
